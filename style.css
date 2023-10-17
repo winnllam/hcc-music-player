@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-light: #ebeae6;
+  --album-size: 580px;
+  --bg-color: #4a5acf;
+  --accent-color: #0d1827;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  font-family: "Bebas Neue", Helvetica Neue, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    var(--bg-color) 0%,
+    var(--accent-color) 100%
+  );
+}
+
+header {
+  width: 100%;
+  padding: 48px 5vw 8px;
+  color: var(--color-light);
+  display: flex;
+  place-content: center;
+  font-size: 24px;
+  z-index: 100;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+section {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 40px 0;
+}
+
+h1 {
+  font-family: "Cormorant", "Bebas Neue", Helvetica Neue, Arial, sans-serif;
+  color: var(--color-light);
+  font-size: 96px;
+  width: 90vw;
+  max-width: 980px;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  align-items: center;
+  font-weight: 500;
+  line-height: 130%;
+  z-index: 2;
+  position: relative;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+  bottom: -20%;
+  transform-origin: center;
+  opacity: 0;
+  transform: translateY(15%);
+}
+
+h1 span {
+  width: 100%;
+}
+
+h1 span:last-of-type {
+  text-align: right;
+}
+
+.album-art {
+  background-position: center center;
+  background-size: cover;
+  width: var(--album-size);
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.album-title,
+.song-num {
+  color: var(--bg-color);
+}
+
+.song-info {
+  position: absolute;
+  left: 0;
+  top: -18px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.song-name {
+  text-align: left;
+  position: relative;
+}
+
+.album-transition {
+  animation: 0.6s ease-out album-transition;
+}
+
+.show-texts {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-property: opacity, transform;
+  transition-duration: 1.4s, 0.5s;
+}
+
+.button-container {
+  padding: 8px 5vw 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.nav-arrow {
+  font-family: "Cormorant", "Bebas Neue", Helvetica Neue, Arial, sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  height: 56px;
+  background: none;
+  border: none;
+  color: var(--color-light);
+  opacity: 0.3;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.nav-arrow span {
+  width: 80px;
+  height: 2px;
+  background: var(--color-light);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 32px;
+}
+
+.nav-arrow span:before,
+.nav-arrow span:after,
+.nav-arrow span {
+  transition: all 0.3s ease;
+}
+
+.nav-arrow span:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-light);
+  left: 4px;
+  transform: rotate(-45deg);
+  border-bottom: none;
+  border-right: none;
+}
+
+.nav-arrow span:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light);
+  right: -14px;
+}
+
+.nav-arrow:hover span:before {
+  width: 32px;
+  height: 32px;
+}
+
+.nav-arrow:hover span:after {
+  width: 48px;
+  height: 48px;
+  right: -26px;
+}
+
+.nav-arrow:hover span {
+  width: 72px;
+}
+
+.prev-btn:hover span {
+  margin-right: 48px;
+}
+
+.next-btn:hover span {
+  margin-left: 48px;
+}
+
+.next-btn span {
+  margin-left: 32px;
+  margin-right: 0;
+  transform: rotateY(180deg);
+}
+
+.nav-arrow:hover {
+  opacity: 1;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.hide-arrow {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spotify-widget {
+  width: var(--album-size);
+  z-index: 100;
+  margin-bottom: 8px;
+}
+
+.spotify-widget iframe {
+  border-radius: 12px;
+}
+
+@keyframes album-transition {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    --album-size: 80vw;
+  }
+
+  .album-art {
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+  .spotify-widget {
+    margin-bottom: 24px;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  h1 {
+    font-size: 72px;
+  }
+}
+
+@media only screen and (max-height: 740px) {
+  h1 {
+    font-size: 64px;
+    width: 60vw;
+  }
+  .button-container {
+    padding: 8px 5vw 8px;
+  }
+  .spotify-widget {
+    margin-bottom: 0px;
+  }
+}
