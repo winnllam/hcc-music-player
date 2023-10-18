@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-light: #ebeae6;
+  --album-size: 580px;
+  --bg-color: #4a5acf;
+  --accent-color: #0d1827;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.album-transition {
+  animation: 0.6s ease-out album-transition;
+}
+
+.show-texts {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-property: opacity, transform;
+  transition-duration: 1.4s, 0.5s;
+}
+
+.nav-arrow {
+  font-family: "Cormorant", "Bebas Neue", Helvetica Neue, Arial, sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  height: 56px;
+  background: none;
+  border: none;
+  color: var(--color-light);
+  opacity: 0.3;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.nav-arrow span {
+  width: 80px;
+  height: 2px;
+  background: var(--color-light);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 32px;
+}
+
+.nav-arrow span:before,
+.nav-arrow span:after,
+.nav-arrow span {
+  transition: all 0.3s ease;
+}
+
+.nav-arrow span:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-light);
+  left: 4px;
+  transform: rotate(-45deg);
+  border-bottom: none;
+  border-right: none;
+}
+
+.nav-arrow span:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light);
+  right: -14px;
+}
+
+.nav-arrow:hover span:before {
+  width: 32px;
+  height: 32px;
+}
+
+.nav-arrow:hover span:after {
+  width: 48px;
+  height: 48px;
+  right: -26px;
+}
+
+.nav-arrow:hover span {
+  width: 72px;
+}
+
+.prev-btn:hover span {
+  margin-right: 48px;
+}
+
+.next-btn:hover span {
+  margin-left: 48px;
+}
+
+.next-btn span {
+  margin-left: 32px;
+  margin-right: 0;
+  transform: rotateY(180deg);
+}
+
+.nav-arrow:hover {
+  opacity: 1;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.hide-arrow {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes album-transition {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
