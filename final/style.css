@@ -82,6 +82,16 @@ h1 span:last-of-type {
   text-align: right;
 }
 
+.forecast {
+  color: rgb(221, 221, 221);
+}
+
+.weather-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
 .album-art {
   background-position: center center;
   background-size: cover;
