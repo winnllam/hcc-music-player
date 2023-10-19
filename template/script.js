@@ -40,7 +40,7 @@ function handlePlayer() {
     songNum.innerText = number >= 10 ? number + "." : `0${number}.`;
 
     const song = playlist[index];
-    albumArt.style.backgroundImage = `url(${song.album_art})`;
+    albumArt.src = song.album_art;
     albumTitle.textContent = song.album;
     songName.textContent = song.name;
     spotifyWidget.src = song.spotify_url;
