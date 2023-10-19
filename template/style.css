@@ -12,7 +12,7 @@ header {
   letter-spacing: 1px;
 }
 
-h1 {
+.text {
   font-family: "Cormorant", "Bebas Neue", Helvetica Neue, Arial, sans-serif;
   color: #ebeae6;
   font-size: 70px;
