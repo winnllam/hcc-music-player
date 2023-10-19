@@ -10,7 +10,7 @@ const prevSong = document.querySelector(".prev-btn");
 const nextSong = document.querySelector(".next-btn");
 const albumArt = document.querySelector(".album-art");
 const albumTitle = document.querySelector(".album-title");
-const text = document.querySelector(".text");
+const texts = document.querySelectorAll(".text");
 const songNum = document.querySelector(".song-num");
 const songName = document.querySelector(".song-name");
 const spotifyWidget = document.querySelector(".spotify-widget iframe");
@@ -22,7 +22,9 @@ function handlePlayer() {
   nextSong.addEventListener("click", () => handleSongControl(1));
   albumArt.addEventListener("animationend", () => {
     albumArt.classList.remove("album-transition");
-    text.classList.add("show-texts");
+    for (const text of texts) {
+      text.classList.add("show-texts");
+    }
   });
 
   const handleSongControl = (direction) => {
@@ -34,7 +36,9 @@ function handlePlayer() {
 
   let index = 0;
   const updateDisplay = (index) => {
-    text.classList.remove("show-texts");
+    for (const text of texts) {
+      text.classList.remove("show-texts");
+    }
 
     const number = index + 1;
     songNum.innerText = number >= 10 ? number + "." : `0${number}.`;
