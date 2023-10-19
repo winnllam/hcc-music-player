@@ -4,55 +4,6 @@ const weather = {
   cloudy: ["cloudy", "overcast"],
 };
 
-const sunny = [
-  {
-    album: "RENAISSANCE",
-    name: "CUFF IT",
-    album_art:
-      "https://i.scdn.co/image/ab67616d0000b2730e58a0f8308c1ad403d105e7",
-    spotify_url:
-      "https://open.spotify.com/embed/track/1xzi1Jcr7mEi9K2RfzLOqS?utm_source=generator",
-  },
-];
-
-const rainy = [
-  {
-    album: "RENAISSANCE",
-    name: "BREAK MY SOUL",
-    album_art:
-      "https://i.scdn.co/image/ab67616d0000b2730e58a0f8308c1ad403d105e7",
-    spotify_url:
-      "https://open.spotify.com/embed/track/5pyoxDZ1PX0KxBxiRVxA4U?utm_source=generatorr",
-  },
-  {
-    album: "4",
-    name: "Love On Top",
-    album_art:
-      "https://i.scdn.co/image/ab67616d0000b273ff5429125128b43572dbdccd",
-    spotify_url:
-      "https://open.spotify.com/embed/track/1z6WtY7X4HQJvzxC4UgkSf?utm_source=generatorr",
-  },
-];
-
-const cloudy = [
-  {
-    album: "Dangerously In Love",
-    name: "Crazy In Love (feat. Jay Z)",
-    album_art:
-      "https://i.scdn.co/image/ab67616d0000b27345680a4a57c97894490a01c1",
-    spotify_url:
-      "https://open.spotify.com/embed/track/5IVuqXILoxVWvWEPm82Jxr?utm_source=generatorr",
-  },
-  {
-    album: "4",
-    name: "Love On Top",
-    album_art:
-      "https://i.scdn.co/image/ab67616d0000b273ff5429125128b43572dbdccd",
-    spotify_url:
-      "https://open.spotify.com/embed/track/1z6WtY7X4HQJvzxC4UgkSf?utm_source=generatorr",
-  },
-];
-
 let playlist = [];
 
 const prevSong = document.querySelector(".prev-btn");
