@@ -108,7 +108,7 @@ const cloudy = [
   },
   {
     album: "Lemonade",
-    name: "6 Inch (feat. The Weekend",
+    name: "6 Inch (feat. The Weekend)",
     album_art:
       "https://i.scdn.co/image/ab67616d0000b27389992f4d7d4ab94937bf9e23",
     spotify_url:
