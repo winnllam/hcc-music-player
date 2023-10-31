@@ -11,7 +11,7 @@ const nextSong = document.querySelector(".next-btn");
 const albumArt = document.querySelector(".album-art");
 const albumTitle = document.querySelector(".album-title");
 const texts = document.querySelectorAll(".text");
-const songNum = document.querySelector(".song-num");
+const songNum = document.querySelector(".song-number");
 const songName = document.querySelector(".song-name");
 const spotifyWidget = document.querySelector(".spotify-widget iframe");
 const forecast = document.querySelector(".forecast span");
@@ -45,7 +45,7 @@ function handlePlayer() {
 
     const song = playlist[index];
     albumArt.src = song.album_art;
-    albumTitle.textContent = song.album;
+    albumTitle.textContent = song.name;
     songName.textContent = song.name;
     spotifyWidget.src = song.spotify_url;
 
@@ -56,7 +56,7 @@ function handlePlayer() {
     }
 
     if (index === playlist.length - 1) {
-      nextSong.classList.add("hide-arrow");
+      nextSong.classList.remove("hide-arrow");
     } else {
       nextSong.classList.remove("hide-arrow");
     }
