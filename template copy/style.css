@@ -1,0 +1,60 @@
+html,
+body {
+  font-family: "Bebas Neue", Helvetica Neue, Arial, sans-serif;
+  background: linear-gradient(180deg, #4a5acf 0%, #0d1827 100%);
+}
+
+h1 {
+  color: yellow;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.text {
+  font-family: "Cormorant", "Bebas Neue", Helvetica Neue, Arial, sans-serif;
+  color: #ebeae6;
+  font-size: 70px;
+  font-weight: 500;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+}
+
+.forecast {
+  color: white;
+}
+
+.weather-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.artist {
+  text-align: center;
+}
+
+.album-art {
+  width: 500px;
+  height: 500px;
+  object-fit: fill;
+  border-radius: 15px;
+}
+
+.album-title,
+.song-num {
+  font-size: 32px;
+  font-weight: 500;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  color: #4a5acf;
+}
+
+.song-name {
+}
+
+.spotify-widget {
+  width: 580px;
+  margin-bottom: 8px;
+}
+
+.spotify-widget iframe {
+  border-radius: 12px;
+}
